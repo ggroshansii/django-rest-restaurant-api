@@ -1,6 +1,7 @@
 from rest_framework import generics
-from .models import Menu
-from .serializers import MenuSerializer
+from menu.models import Menu
+from menu.serializers import MenuSerializer
+
 
 # Create your views here.
 
