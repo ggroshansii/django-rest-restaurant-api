@@ -6,7 +6,7 @@ class Menu(models.Model):
     name = models.CharField(max_length=255)
     ingredients = models.CharField(max_length=255)
     desc = models.CharField(max_length=255)
-    price = models.CharField(max_length=255)
+    price = models.IntegerField(max_length=255)
     type = models.CharField(max_length=255)
 
     def __str__(self):
