@@ -6,8 +6,8 @@ class OrderItem(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     name = models.CharField(max_length=25)
-    tax = models.FloatField()
-    total = models.FloatField()
+    tax = models.IntegerField(default=0)
+    total = models.IntegerField(default=0)
     isCompleted = models.BooleanField()
     order = models.JSONField()
 
