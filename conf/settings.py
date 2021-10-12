@@ -46,6 +46,7 @@ INSTALLED_APPS = [
 
     #local
     'menu.apps.MenuConfig',
+    'order.apps.OrderConfig',
     'api.apps.ApiConfig'
 ]
 
