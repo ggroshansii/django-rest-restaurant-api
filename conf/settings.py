@@ -26,7 +26,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','django-rest-restaurant-api.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1','django-rest-restaurant-api.herokuapp.com', 'corsheaders']
 
 
 # Application definition
@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     
     #third-party
     'rest_framework',
+    'corsheaders',
 
     #local
     'menu.apps.MenuConfig',
@@ -49,6 +50,8 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',  #new
+    'django.middleware.common.CommonMiddleware', #new
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
