@@ -11,5 +11,9 @@ class OrderItem(models.Model):
     isCompleted = models.BooleanField()
     order = models.JSONField()
 
+
+    class Meta:
+        ordering = ('-created_at')
+
     def __str__(self):
         return self.order
